@@ -501,9 +501,9 @@ MonoBehaviour:
 
     Move: Arrows
 
-    Punch: 2
+    Punch: Z
 
-    Block: 3'
+    Block: X'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d4189ac48cb72974ab4fd0162f04c9f8, type: 2}
   m_sharedMaterial: {fileID: 898463476740497859, guid: d4189ac48cb72974ab4fd0162f04c9f8, type: 2}
