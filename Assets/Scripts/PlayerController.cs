@@ -10,28 +10,28 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
 
     private string playerTag;
-    public float jumpForce = 5f;
-    public float crouchHeight = 0.5f; // Altura reducida al agacharse
-    public bool isCrouching = false;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float crouchHeight = 0.5f; // Altura reducida al agacharse
+    private bool isCrouching = false;
     private bool isJumping = false;
 
     private BoxCollider2D boxCollider;
     private Vector2 originalSize; // Tamaño original del collider
     private Vector2 originalOffset; // Offset original del collider
 
-    public float maxHealth = 100f; // Vida máxima
-    public float currentHealth;    // Vida actual
-    public Image healthBar; // Asigna esta variable en el Inspector
-    public Gradient healthGradient; // Gradiente para el color de la barra
-    public AttackController attackManager; // Asigna el AttackManager en el Inspector
+    [SerializeField] private float maxHealth = 100f; // Vida máxima
+    private float currentHealth;    // Vida actual
+    [SerializeField] private Image healthBar; // Asigna esta variable en el Inspector
+    [SerializeField] private Gradient healthGradient; // Gradiente para el color de la barra
+    [SerializeField] private AttackController attackManager; // Asigna el AttackManager en el Inspector
     private Collider2D otherPlayerCollider; // Collider del otro jugador
     private bool isBlocking = false; // Estado de bloqueo
     private bool isPunching = false; // Variable para controlar si el jugador está golpeando
 
     private Animator animator; // Referencia al Animator
 
-    public AudioSource audioSource; // Fuente de audio
-    public AudioClip punchSound; // Clip de sonido para el golpe
+    [SerializeField] private AudioSource audioSource; // Fuente de audio
+    [SerializeField] private AudioClip punchSound; // Clip de sonido para el golpe
 
 
     void Start()
